@@ -18,6 +18,7 @@ using namespace std;
 #define Click(events) mouse_event(events, 0, 0, 0, 0 ) //鼠标点击
 #define LeftClick MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP //鼠标左击
 #define RightClick MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP //鼠标右击
+#define v vector //vector简写
 
 typedef void vfunc(void); //函数类型
 
@@ -41,13 +42,13 @@ size_t getFileSize(const char* fileName); //获取文件大小（已弃用）
 void SetTitle(const char* Title) //设置标题
 {
 	char command[100];
-	sprintf_s(command,"title %s",Title);
+	sprintf_s(command, "title %s", Title);
 	system(command);
 }
 void SetWinSize(int wide, int high)
 {
 	char command[100];
-	sprintf_s(command,"mode con:cols=%d lines=%d",wide,high);
+	sprintf_s(command, "mode con:cols=%d lines=%d", wide, high);
 	system(command);
 }
 
@@ -78,7 +79,7 @@ void HideCursor()
 	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO CursorInfo;
 	GetConsoleCursorInfo(handle, &CursorInfo);
-	CursorInfo.bVisible = false; 
+	CursorInfo.bVisible = false;
 	SetConsoleCursorInfo(handle, &CursorInfo);
 }
 void ShowCursor()
@@ -104,15 +105,15 @@ template<typename _Tstr> void print(_Tstr text)
 }
 template<typename _Tstr> void print(_Tstr text, int PosX, int PosY)
 {
-	SetPos(PosX,PosY);
+	SetPos(PosX, PosY);
 	print(text);
 }
 template<typename _Tstr> void print(_Tstr text, WORD colors, int PosX, int PosY)
 {
-	SetPos(PosX,PosY);
+	SetPos(PosX, PosY);
 	print(text, colors);
 }
-template<typename _Tstr> void print(_Tstr text, WORD colors)  
+template<typename _Tstr> void print(_Tstr text, WORD colors)
 {
 	SetColor(colors);
 	print(text);
@@ -135,7 +136,7 @@ void eventLoop(vector<WORD> event, vector<vfunc*> handle)
 	}
 }
 
-void bubblsort(int* target, int len) 
+void bubblsort(int* target, int len)
 {
 	for (int i = 0; !(i == len - 1); i++)
 	{
@@ -151,14 +152,14 @@ void bubblsort(int* target, int len)
 	}
 }
 
-void sleep_cout(string cout_str, double sleep_time = 0.2)
+void sleep_cout(string cout_str, double sleep_time = 20)
 {
 	string str = cout_str;
 	if (0 == str.length()) { return; }
 	for (int i = 0; i < str.length(); i++)
 	{
 		cout << str[i];
-		Sleep(sleep_time * 1000);
+		Sleep(sleep_time);
 	}
 }
 

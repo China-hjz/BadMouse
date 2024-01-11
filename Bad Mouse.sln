@@ -4,6 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bad Mouse", "Bad Mouse.vcxproj", "{C97F7389-155F-4368-A5AB-81843C9AA670}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E} = {4F82DC93-358C-4F92-82BD-1791ADD6784E}
+		{D4D1A092-9FED-4550-97FE-66ED730532A9} = {D4D1A092-9FED-4550-97FE-66ED730532A9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Check", "Check\Check.vcxproj", "{D4D1A092-9FED-4550-97FE-66ED730532A9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Update", "Update\Update.vcxproj", "{4F82DC93-358C-4F92-82BD-1791ADD6784E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{C97F7389-155F-4368-A5AB-81843C9AA670}.Release|x64.Build.0 = Release|x64
 		{C97F7389-155F-4368-A5AB-81843C9AA670}.Release|x86.ActiveCfg = Release|Win32
 		{C97F7389-155F-4368-A5AB-81843C9AA670}.Release|x86.Build.0 = Release|Win32
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Debug|x64.ActiveCfg = Debug|x64
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Debug|x64.Build.0 = Debug|x64
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Debug|x86.ActiveCfg = Debug|Win32
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Debug|x86.Build.0 = Debug|Win32
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Release|x64.ActiveCfg = Release|x64
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Release|x64.Build.0 = Release|x64
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Release|x86.ActiveCfg = Release|Win32
+		{D4D1A092-9FED-4550-97FE-66ED730532A9}.Release|x86.Build.0 = Release|Win32
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Debug|x64.ActiveCfg = Debug|x64
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Debug|x64.Build.0 = Debug|x64
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Debug|x86.ActiveCfg = Debug|Win32
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Debug|x86.Build.0 = Debug|Win32
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Release|x64.ActiveCfg = Release|x64
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Release|x64.Build.0 = Release|x64
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Release|x86.ActiveCfg = Release|Win32
+		{4F82DC93-358C-4F92-82BD-1791ADD6784E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
